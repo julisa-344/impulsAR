@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>impulsAR</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- The following libraries and polyfills are recommended to maximize browser support -->
+    <!-- NOTE: you must adjust the paths as appropriate for your project -->
+    <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script
+      src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div id="carousel">
+      <div class="model-container">
+        <model-viewer
+          id="model1"
+          src="https://cdn.glitch.me/33515771-c739-4b66-a7f1-88a11ff96e8c/prueba%20polar.glb?v=1703429063623"
+          ios-src="https://cdn.glitch.me/33515771-c739-4b66-a7f1-88a11ff96e8c/prueba%20polar.usdz?v=1703429031658"
+          poster="imagen de carga"
+          alt="texto alternativo"
+          shadow-intensity="1"
+          camera-controls
+          auto-rotate
+          ar
+        >
+        </model-viewer>
+      </div>
+      <div class="model-container">
+        <model-viewer
+          id="model2"
+          src="https://cdn.glitch.global/33515771-c739-4b66-a7f1-88a11ff96e8c/blanco.glb?v=1703356236274"
+          ios-src="https://cdn.glitch.me/33515771-c739-4b66-a7f1-88a11ff96e8c/blanco.usdz?v=1703356268392"
+          poster="imagen de carga"
+          alt="texto alternativo"
+          shadow-intensity="1"
+          camera-controls
+          auto-rotate
+          ar
+        >
+        </model-viewer>
+      </div>
+      <div class="model-container">
+        <model-viewer
+          id="model3"
+          src="https://cdn.glitch.global/33515771-c739-4b66-a7f1-88a11ff96e8c/negro.glb?v=1703301022722"
+          ios-src="https://cdn.glitch.me/33515771-c739-4b66-a7f1-88a11ff96e8c/negro.usdz?v=1703301462491"
+          poster="imagen de carga"
+          alt="texto alternativo"
+          shadow-intensity="1"
+          camera-controls
+          auto-rotate
+          ar
+        >
+        </model-viewer>
+      </div>
+      <div class="model-container">
+        <model-viewer
+          id="model4"
+          src="https://cdn.glitch.global/33515771-c739-4b66-a7f1-88a11ff96e8c/celeste.glb?v=1703356239422"
+          ios-src="https://cdn.glitch.me/33515771-c739-4b66-a7f1-88a11ff96e8c/celeste.usdz?v=1703356266855"
+          poster="imagen de carga"
+          alt="texto alternativo"
+          shadow-intensity="1"
+          camera-controls
+          auto-rotate
+          ar
+        >
+        </model-viewer>
+      </div>
+      <div class="model-container">
+        <model-viewer
+          id="model5"
+          src="https://cdn.glitch.global/33515771-c739-4b66-a7f1-88a11ff96e8c/blanco.glb?v=1703356236274"
+          ios-src="https://cdn.glitch.me/33515771-c739-4b66-a7f1-88a11ff96e8c/blanco.usdz?v=1703356268392"
+          poster="imagen de carga"
+          alt="texto alternativo"
+          shadow-intensity="1"
+          camera-controls
+          auto-rotate
+          ar
+        >
+        </model-viewer>
+      </div>
+
+      <div class="model-container">
+        <model-viewer
+          id="model6"
+          src="https://cdn.glitch.global/33515771-c739-4b66-a7f1-88a11ff96e8c/celeste.glb?v=1703356239422"
+          ios-src="https://cdn.glitch.me/33515771-c739-4b66-a7f1-88a11ff96e8c/celeste.usdz?v=1703356266855"
+          poster="imagen de carga"
+          alt="texto alternativo"
+          shadow-intensity="1"
+          camera-controls
+          auto-rotate
+          ar
+        >
+        </model-viewer>
+      </div>
+    </div>
+    <section class="color-selection">
+      <div class="color-option"></div>
+      <div class="color-option"></div>
+      <div class="color-option"></div>
+      <div class="color-option"></div>
+      <div class="color-option"></div>
+    </section>
+
+    <div class="attribution">
+        <button class="arrow-button" onclick="prevModel()">
+            <img src="ruta_de_la_imagen_anterior.png" alt="Imagen anterior" />
+            ◄
+        </button>
+        <button class="arrow-button" onclick="nextModel()">
+            ►
+            <img src="ruta_de_la_siguiente_imagen.png" alt="Siguiente imagen" />
+        </button>
+    </div>
+     <!-- 💁 Include both scripts below to support all browsers!
+    Loads <model-viewer> for modern browsers: -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+
+    <script src="./script.js"></script>
+    <script>
+    </script>
+  </body>
+</html>
