@@ -69,22 +69,29 @@
       function prevModel() {
         currentModelIndex = (currentModelIndex - 1 + modelos.length) % modelos.length;
         updateModel();
-        if (currentModelIndex > 0) {
-          let imgElement = document.getElementById("prevImage");
-          imgElement.src = `img${currentModelIndex - 1}.png`;
-        }
       }
 
       function nextModel() {
         currentModelIndex = (currentModelIndex + 1) % modelos.length;
         updateModel();
-        if (currentModelIndex < modelos.length - 1) { // assuming totalModels is the total number of models
-          let imgElement = document.querySelector('.attribution .arrow-button img');
-          imgElement.src = `img${currentModelIndex}.png`;
-        }
       }
 
       function updateModel() {
+        let imgElementPrev = document.getElementById('prevImage');
+        let imgElementNext = document.getElementById('nextImage');
+        let prevIndex = currentModelIndex - 1;
+        let nextIndex = currentModelIndex + 1;
+
+        // Handle edge cases
+        if (prevIndex < 0) {
+          prevIndex = modelos.length - 1;
+        }
+        if (nextIndex >= modelos.length) {
+          nextIndex = 0;
+        }
+
+        imgElementPrev.src = `img${prevIndex}.png`;
+        imgElementNext.src = `img${nextIndex}.png`;
         const currentModel = modelos[currentModelIndex];
         modelViewer.setAttribute("src", currentModel.src);
         modelViewer.setAttribute("ios-src", currentModel.iosSrc);
