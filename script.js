@@ -1,5 +1,3 @@
-const modelos = require('./data.js');
-
 const carousel = document.getElementById("carousel");
 const modelContainer = carousel.querySelector(".model-container");
 const modelViewer = modelContainer.querySelector("model-viewer");
