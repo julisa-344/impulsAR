@@ -23,6 +23,21 @@ function nextModel() {
 }
 
 function updateModel() {
+    let imgElementPrev = document.getElementById('prevImage');
+    let imgElementNext = document.getElementById('nextImage');
+    let prevIndex = currentModelIndex - 1;
+    let nextIndex = currentModelIndex + 1;
+
+    // Handle edge cases
+    if (prevIndex < 0) {
+        prevIndex = modelos.length - 1;
+    }
+    if (nextIndex >= modelos.length) {
+        nextIndex = 0;
+    }
+
+    imgElementPrev.src = `assets/img${prevIndex + 1}.png`;
+    imgElementNext.src = `assets/img${nextIndex + 1}.png`;
   const currentModel = modelos[currentModelIndex];
   modelViewer.setAttribute("src", currentModel.src);
   modelViewer.setAttribute("ios-src", currentModel.iosSrc);
