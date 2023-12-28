@@ -90,8 +90,8 @@
           nextIndex = 0;
         }
 
-        imgElementPrev.src = `img${prevIndex}.png`;
-        imgElementNext.src = `img${nextIndex}.png`;
+        imgElementPrev.src = `assets/img${prevIndex + 1}.png`;
+        imgElementNext.src = `assets/img${nextIndex + 1}.png`;
         const currentModel = modelos[currentModelIndex];
         modelViewer.setAttribute("src", currentModel.src);
         modelViewer.setAttribute("ios-src", currentModel.iosSrc);
