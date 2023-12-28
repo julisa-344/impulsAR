@@ -92,11 +92,17 @@ body {
     font-style: italic;
     line-height: 1.5em;
   }
-  
+  .color-selection-container{
+    margin: 0 auto;
+    background-color: #70bcd1;
+    width: 100%;
+  }
   .color-selection {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #70bcd1;
+    width: 100%;
   }
 
   .color-option {
