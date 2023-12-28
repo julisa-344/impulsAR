@@ -1,3 +1,8 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
     display: flex;
     flex-direction: column;
@@ -9,7 +14,9 @@ body {
     align-items: center;
     height: 98vh;
   }
-  
+  h2 {
+    text-align: center;
+  }
   #card {
     margin: 3em auto;
     display: flex;
@@ -73,6 +80,8 @@ body {
   }
   
   .arrow-button {
+    display: flex;
+    align-items: center;
     background-color: #3498db;
     color: #fff;
     padding: 10px 20px;
@@ -96,6 +105,7 @@ body {
     margin: 0 auto;
     background-color: #70bcd1;
     width: 100%;
+    padding: 1rem;
   }
   .color-selection {
     display: flex;

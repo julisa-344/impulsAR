@@ -5,6 +5,7 @@ const modelos = [
         src: "https://cdn.glitch.me/33515771-c739-4b66-a7f1-88a11ff96e8c/prueba%20polar.glb?v=1703429063623",
         iosSrc: "https://cdn.glitch.me/33515771-c739-4b66-a7f1-88a11ff96e8c/prueba%20polar.usdz?v=1703429031658",
         poster: "imagen de carga",
+        miniatura: "celeste.png",
         alt: "texto alternativo",
         shadowIntensity: 1,
         cameraControls: true,
