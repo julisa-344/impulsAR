@@ -6,9 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
-    <!-- The following libraries and polyfills are recommended to maximize browser support -->
-    <!-- NOTE: you must adjust the paths as appropriate for your project -->
-    <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
     <script
       src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js"
       defer
@@ -18,7 +15,7 @@
     <div id="carousel">
       <div class="model-container">
         <model-viewer
-          id="model1"
+          id=""
           src=""
           ios-src=""
           poster="imagen de carga"
@@ -34,11 +31,9 @@
     <section class="color-selection-container">
       <h2>colores</h2>
       <div class="color-selection">
-        <div class="color-option"></div>
-        <div class="color-option"></div>
-        <div class="color-option"></div>
-        <div class="color-option"></div>
-        <div class="color-option"></div>
+        <div class="color-option" onclick="changeModelColor('model1', 'celeste')"></div>
+        <div class="color-option" onclick="changeModelColor('model1', 'blanco')"></div>
+        <div class="color-option" onclick="changeModelColor('model1', 'negro')"></div>
       </div>
     </section>
     <div class="attribution">
