@@ -9,7 +9,8 @@ const modelos = [
         shadowIntensity: 1,
         cameraControls: true,
         autoRotate: true,
-        ar: true
+        ar: true,
+        colors: ['celeste', 'blanco', 'negro']
     },
     {
         id: "model2",
@@ -20,7 +21,8 @@ const modelos = [
         shadowIntensity: 1,
         cameraControls: true,
         autoRotate: true,
-        ar: true
+        ar: true,
+        colors: ['amarillo', 'rojo', 'negro']
     },
     {
         id: "model3",
@@ -31,17 +33,7 @@ const modelos = [
         shadowIntensity: 1,
         cameraControls: true,
         autoRotate: true,
-        ar: true
-    },
-    {
-        id: "model4",
-        src: "https://cdn.glitch.global/33515771-c739-4b66-a7f1-88a11ff96e8c/celeste.glb?v=1703356239422",
-        iosSrc: "https://cdn.glitch.me/33515771-c739-4b66-a7f1-88a11ff96e8c/celeste.usdz?v=1703356266855",
-        poster: "imagen de carga",
-        alt: "texto alternativo",
-        shadowIntensity: 1,
-        cameraControls: true,
-        autoRotate: true,
-        ar: true
+        ar: true,
+        colors: ['celeste', 'blanco', 'negro']
     }
 ];
