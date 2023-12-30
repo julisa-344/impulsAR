@@ -48,31 +48,47 @@ function nextModel() {
 }
 
 function updateModel() {
-  let imgElementPrev = document.getElementById("prevImage");
-  let imgElementNext = document.getElementById("nextImage");
-  let prevIndex = currentModelIndex - 1;
-  let nextIndex = currentModelIndex + 1;
+    let imgElementPrev = document.getElementById("prevImage");
+    let imgElementNext = document.getElementById("nextImage");
+    let prevIndex = currentModelIndex - 1;
+    let nextIndex = currentModelIndex + 1;
 
-  // Handle edge cases
-  if (prevIndex < 0) {
-    prevIndex = modelos.length - 1;
-  }
-  if (nextIndex >= modelos.length) {
-    nextIndex = 0;
-  }
+    // Handle edge cases
+    if (prevIndex < 0) {
+        prevIndex = modelos.length - 1;
+    }
+    if (nextIndex >= modelos.length) {
+        nextIndex = 0;
+    }
 
-  imgElementPrev.src = `assets/img${prevIndex + 1}.png`;
-  imgElementNext.src = `assets/img${nextIndex + 1}.png`;
-  const currentModel = modelos[currentModelIndex];
-  modelViewer.setAttribute("id", currentModel.id);
-  modelViewer.setAttribute("src", currentModel.src);
-  modelViewer.setAttribute("ios-src", currentModel.iosSrc);
-  modelViewer.setAttribute("poster", currentModel.poster);
-  modelViewer.setAttribute("alt", currentModel.alt);
-  modelViewer.setAttribute("shadow-intensity", currentModel.shadowIntensity);
-  modelViewer.setAttribute("camera-controls", currentModel.cameraControls);
-  modelViewer.setAttribute("auto-rotate", currentModel.autoRotate);
-  modelViewer.setAttribute("ar", currentModel.ar);
+    imgElementPrev.src = `assets/img${prevIndex + 1}.png`;
+    imgElementNext.src = `assets/img${nextIndex + 1}.png`;
+    const currentModel = modelos[currentModelIndex];
+    modelViewer.setAttribute("id", currentModel.id);
+    modelViewer.setAttribute("src", currentModel.src);
+    modelViewer.setAttribute("ios-src", currentModel.iosSrc);
+    modelViewer.setAttribute("poster", currentModel.poster);
+    modelViewer.setAttribute("alt", currentModel.alt);
+    modelViewer.setAttribute("shadow-intensity", currentModel.shadowIntensity);
+    modelViewer.setAttribute("camera-controls", currentModel.cameraControls);
+    modelViewer.setAttribute("auto-rotate", currentModel.autoRotate);
+    modelViewer.setAttribute("ar", currentModel.ar);
+
+    const colorSelection = document.querySelector(".color-selection");
+    colorSelection.innerHTML = ""; // Clear existing color items
+
+    console.log("currentModel", currentModel.colors);
+
+    for (const color in currentModel.colors) {
+        const colorItem = document.createElement("div");
+        colorItem.classList.add("color-option");
+        colorItem.style.backgroundColor = colors[currentModel.colors[color]];
+        console.log('perrrro', colors, color);
+        colorItem.onclick = function() {
+            changeModelColor(currentModel.id, color);
+        };
+        colorSelection.appendChild(colorItem);
+    }
 }
 
 function updateModelWithAnimationLeft() {
