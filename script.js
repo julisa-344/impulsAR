@@ -8,6 +8,7 @@ const colors = {
     amarillo: '#F7E992',
     rojo: '#FF7751',
 }
+
 let currentModelIndex = 0;
 currentModelIndex = (currentModelIndex - 1 + modelos.length) % modelos.length;
 
@@ -37,54 +38,12 @@ function prevModel() {
   console.log(currentModelIndex);
   console.log("modelid", modelos[currentModelIndex].id);
   modelId = modelos[currentModelIndex].id;
-  function changeModelColor(modelId, color) {
-    const model = document.getElementById(modelId);
-    if (model) {
-      console.log(model);
-      if (currentModelIndex === 1) {
-        model.setAttribute(
-          "src",
-          `https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/dise%C3%B1o1color${color}.glb?v=1703802417670`
-        );
-      } else if (currentModelIndex === 2) {
-        model.setAttribute(
-          "src",
-          `https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/dise%C3%B1o2color${color}.glb?v=1703802598584`
-        );
-      } else if (currentModelIndex === 3) {
-        model.setAttribute(
-          "src",
-          `https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/dise%C3%B1o3color${color}.glb?v=1703802623090`
-        );
-      }
-    }
-  }
   updateModelWithAnimationLeft();
 }
 
 function nextModel() {
   currentModelIndex = (currentModelIndex + 1) % modelos.length;
   modelId = modelos[currentModelIndex].id;
-  function changeModelColor(modelId, color) {
-    const model = document.getElementById(modelId);
-    console.log(model);
-    if ((currentModelIndex = 1)) {
-      model.setAttribute(
-        "src",
-        `https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/dise%C3%B1o1color${color}.glb?v=1703802417670`
-      );
-    } else if ((currentModelIndex = 2)) {
-      model.setAttribute(
-        "src",
-        `https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/dise%C3%B1o2color${color}.glb?v=1703802598584`
-      );
-    } else if ((model = 3)) {
-      model.setAttribute(
-        "src",
-        `https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/dise%C3%B1o3color${color}.glb?v=1703802623090`
-      );
-    }
-  }
   updateModelWithAnimation();
 }
 
