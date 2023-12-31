@@ -14,21 +14,21 @@ currentModelIndex = (currentModelIndex - 1 + modelos.length) % modelos.length;
 
 function changeModelColor(modelId, color) {
   const model = document.getElementById(modelId);
-  console.log("model", model);
-  if ((model === 'model1')) {
+  console.log("model", model.id);
+  if ((model.id === 'model1')) {
     model.setAttribute(
       "src",
-      `https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/dise%C3%B1o1color${color}.glb?v=1703802417670`
+      `https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/diseño1color${color}.glb?v=1703802417670`
     );
-  } else if ((model === 'model2')) {
+  } else if ((model.id === 'model2')) {
     model.setAttribute(
       "src",
-      `https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/dise%C3%B1o2color${color}.glb?v=1703802598584`
+      `https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/diseño2color${color}.glb?v=1703802614192`
     );
   } else {
     model.setAttribute(
       "src",
-      `https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/dise%C3%B1o3color${color}.glb?v=1703802623090`
+      `https://cdn.glitch.global/bf01215d-2e55-4604-8ba8-4528ec10c707/diseño3color${color}.glb?v=1703802311051`
     );
   }
 }
@@ -83,9 +83,9 @@ function updateModel() {
         const colorItem = document.createElement("div");
         colorItem.classList.add("color-option");
         colorItem.style.backgroundColor = colors[currentModel.colors[color]];
-        console.log('perrrro', colors, color);
+        console.log('currentModel.id', currentModel.id);
         colorItem.onclick = function() {
-            changeModelColor(currentModel.id, color);
+          changeModelColor(currentModel.id, currentModel.colors[color]);
         };
         colorSelection.appendChild(colorItem);
     }

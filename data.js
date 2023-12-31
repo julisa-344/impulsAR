@@ -2,8 +2,8 @@
 const modelos = [
     {
         id: "model1",
-        src: "https://cdn.glitch.me/33515771-c739-4b66-a7f1-88a11ff96e8c/prueba%20polar.glb?v=1703429063623",
-        iosSrc: "https://cdn.glitch.me/33515771-c739-4b66-a7f1-88a11ff96e8c/prueba%20polar.usdz?v=1703429031658",
+        src: "https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/diseño1colorceleste.glb?v=1703802417670",
+        iosSrc: "https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/diseño1colorceleste.usdz?v=1703803173057",
         poster: "imagen de carga",
         alt: "texto alternativo",
         shadowIntensity: 1,
@@ -14,8 +14,8 @@ const modelos = [
     },
     {
         id: "model2",
-        src: "https://cdn.glitch.global/33515771-c739-4b66-a7f1-88a11ff96e8c/blanco.glb?v=1703356236274",
-        iosSrc: "https://cdn.glitch.me/33515771-c739-4b66-a7f1-88a11ff96e8c/blanco.usdz?v=1703356268392",
+        src: "https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/diseño2colornegro.glb?v=1703802614192",
+        iosSrc: "https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/diseño2colornegro.usdz?v=1703802938649",
         poster: "imagen de carga",
         alt: "texto alternativo",
         shadowIntensity: 1,
@@ -26,8 +26,8 @@ const modelos = [
     },
     {
         id: "model3",
-        src: "https://cdn.glitch.global/33515771-c739-4b66-a7f1-88a11ff96e8c/negro.glb?v=1703301022722",
-        iosSrc: "https://cdn.glitch.me/33515771-c739-4b66-a7f1-88a11ff96e8c/negro.usdz?v=1703301462491",
+        src: "https://cdn.glitch.global/bf01215d-2e55-4604-8ba8-4528ec10c707/diseño3colorblanco.glb?v=1703802311051",
+        iosSrc: "https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/diseño3colorblanco.usdz?v=1703803257653",
         poster: "imagen de carga",
         alt: "texto alternativo",
         shadowIntensity: 1,
