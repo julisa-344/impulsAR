@@ -9,13 +9,15 @@
     margin: 1rem;
     padding: 0;
     font-family: Google Sans, Noto, Roboto, Helvetica Neue, sans-serif;
-    color: #244376;
+    background: rgb(101,134,123);
+    background: linear-gradient(180deg, rgba(101,134,123,1) 0%, rgba(24,44,39,1) 100%);
     justify-content: space-between;
     align-items: center;
     height: 98vh;
   }
 h2{
   text-align: center;
+  color: #fff;
 }
   #card {
     margin: 3em auto;
@@ -30,26 +32,31 @@ h2{
   model-viewer {
     width: 100%;
     height: 400px;
-    background-color: #70bcd1;
     --poster-color: #ffffff00;
   }
   
   .attribution {
-    width: 70%;
-    border-radius: 5px;
-    background-color: #3498db;
+    width: 276PX;
+    border-radius: 13px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 1em;
+    padding: 0.2rem;
+    background-color: #5a7d77;
   }
-  
+  .line{
+    width: 2px;
+    height: 100%;
+    background-color: #314641;
+
+  }
   .attribution h1 {
     margin: 0 0 0.25em;
   }
   
   .attribution img {
-    height: 2em;
+    height: 5rem;
   }
   
   .attribution .cc {
@@ -65,7 +72,6 @@ h2{
     width: 100%;
     max-width: 800px;
     height: 100%;
-    background-color: #70bcd1;
   }
   
   .model-container {
@@ -77,7 +83,6 @@ h2{
   .arrow-button {
     background-color: transparent;
     color: #fff;
-    padding: 10px 20px;
     font-size: 20px;
     border: none;
     cursor: pointer;
@@ -99,14 +104,12 @@ h2{
   .color-selection-container{
     margin: 0 auto;
     padding: 1rem;
-    background-color: #70bcd1;
     width: 100%;
   }
   .color-selection {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #70bcd1;
     width: 100%;
   }
 
@@ -115,4 +118,5 @@ h2{
     height: 30px;
     border-radius: 50%;
     margin: 5px;
+    cursor: pointer;
   }

@@ -7,6 +7,7 @@ const colors = {
     negro:'#000',
     amarillo: '#F7E992',
     rojo: '#FF7751',
+    azul: '#0000F6'
 }
 
 let currentModelIndex = 0;
