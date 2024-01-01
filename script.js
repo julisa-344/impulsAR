@@ -21,15 +21,27 @@ function changeModelColor(modelId, color) {
       "src",
       `https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/diseño1color${color}.glb?v=1703802417670`
     );
+    model.setAttribute(
+      "ios-src",
+      `https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/dise%C3%B1o1color${color}.usdz?v=1703803076946`
+    );
   } else if ((model.id === 'model2')) {
     model.setAttribute(
       "src",
       `https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/diseño2color${color}.glb?v=1703802614192`
     );
+    model.setAttribute(
+      "ios-src",
+      `https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/dise%C3%B1o2color${color}.usdz?v=1703803246921`
+    );
   } else {
     model.setAttribute(
       "src",
       `https://cdn.glitch.global/bf01215d-2e55-4604-8ba8-4528ec10c707/diseño3color${color}.glb?v=1703802311051`
+    );
+    model.setAttribute(
+      "ios-src",
+      `https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/dise%C3%B1o3color${color}.usdz?v=1703803285076`
     );
   }
 }
@@ -54,7 +66,6 @@ function updateModel() {
     let prevIndex = currentModelIndex - 1;
     let nextIndex = currentModelIndex + 1;
 
-    // Handle edge cases
     if (prevIndex < 0) {
         prevIndex = modelos.length - 1;
     }
@@ -76,7 +87,7 @@ function updateModel() {
     modelViewer.setAttribute("ar", currentModel.ar);
 
     const colorSelection = document.querySelector(".color-selection");
-    colorSelection.innerHTML = ""; // Clear existing color items
+    colorSelection.innerHTML = "";
 
     console.log("currentModel", currentModel.colors);
 
