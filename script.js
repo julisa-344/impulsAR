@@ -20,7 +20,11 @@ function changeModelColor(modelId, color) {
     model.setAttribute(
       "src",
       `https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/diseño1color${color}.glb?v=1703802417670`
-    )
+    );
+    model.setAttribute(
+      "ios-src",
+      `https://cdn.glitch.me/bf01215d-2e55-4604-8ba8-4528ec10c707/dise%C3%B1o1color${color}.usdz?v=1703803076946`
+    );
   } else if ((model.id === 'model2')) {
     model.setAttribute(
       "src",
